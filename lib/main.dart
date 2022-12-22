@@ -16,6 +16,7 @@ class Mod1 extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const Home(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -119,6 +120,21 @@ class AnswerScreen extends StatelessWidget {
               style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 28),
             ),
             const SizedBox(
+              height: 15,
+            ),
+            Text(
+              homeResponse?.owner?.accountId.toString() ?? "",
+              style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 28),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            Text(homeResponse?.owner?.userType ?? "",
+                style: const TextStyle(
+                    fontWeight: FontWeight.w300,
+                    fontSize: 15,
+                    color: Colors.blue)),
+                    const SizedBox(
               height: 15,
             ),
             Text(homeResponse?.owner?.link ?? "",
